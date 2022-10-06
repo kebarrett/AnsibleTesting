@@ -1,11 +1,7 @@
-----
- -hosts: all
-  gather_facts: true
-  become: yes
-  become_user: root
-  become_method: sudo
+---
+- name: Checking for Servers
+  hosts: all
 
   tasks:
-  - name: uptime
-  command: uptime      
-  register: uptime
+  - name: Ping each Server
+    
